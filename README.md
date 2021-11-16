@@ -25,6 +25,6 @@ Finally a range of evaluation metrics are calculated to quantify batch correctio
 5. Cluster Cross-distance
 6. Logistic Regression (or other classifier) classification performance of batch and ZeroHop.
 
-
+\section{Installation of packages}
 
 
