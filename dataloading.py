@@ -90,10 +90,10 @@ def getZeroHops(metadata_hops):
             if s in zero_hops[iz]:
                 thisZerohop.append(iz)
     return thisZerohop
-def checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta,obs_eval):
+def checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta,obs_eval,media_filename):
 
     # load medium definitions
-    media_df = pd.read_csv(data_path + 'PA_culture_conditions.csv')
+    media_df = pd.read_csv(os.path.join(data_path, media_filename))
     media_df = media_df[:92]
     new_ind = []
     for m in media_df['Medium in data base']:
@@ -142,7 +142,7 @@ def checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta,obs_eval):
                 else:
                     sc = 'rich0'
                 richness.append(sc)
-            df_sub['richness'] = richness
+            df_sub.loc[:,'richness'] = richness
 
             # Check that 3 gse remain:
             n_gse = []
@@ -189,7 +189,7 @@ def checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta,obs_eval):
                 else:
                     sc = 'notDefined'
                 definedness.append(sc)
-            df_sub['definedness'] = definedness
+            df_sub.loc[:,'definedness'] = definedness
 
             # Check that 3 gse remain:
             n_gse = []
@@ -240,7 +240,7 @@ def checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta,obs_eval):
     df_meta['n_samples'] = n_samples
     df_meta['n_gse'] = n_batch
 
-    return metadata, metadata_cat, df_meta
+    return metadata_cat, df_meta
 def coarsenMetadata(metadata):
 
 
@@ -482,9 +482,6 @@ def coarsenMetadata(metadata):
                                                 'control',
                                                 'Normalized_by',
                                                 'Replicas',
-                                                'One-hop neighbours',
-                                                'Zero-to-one-hop neighbours',
-                                                'Zero-hop cluster',
                                                 'temperature',
                                                 'medium',
                                                 'consistant_supplements',
@@ -575,7 +572,6 @@ def removeZHwithFewBatches(data_use,metadata_hops,metadata_all):
     for this_zh in metadata_hops.ZeroHop.unique():
         data_sub = metadata_hops[metadata_hops.ZeroHop == this_zh]
         n_gse = len(data_sub.gse.unique())
-        print(n_gse)
         if n_gse < 2:
             excl_zh.append(this_zh)
             excl_gsm += list(data_sub.index)
@@ -633,10 +629,6 @@ def getArrayData(data_path,excl2SampleBatches, data_filename, metadata_filename)
 
     data      = pd.read_csv(os.path.join(data_path,data_filename),sep='\t',header=0,index_col=0).transpose()
     metadata  = pd.read_csv(os.path.join(data_path,metadata_filename),header=0,index_col=0)
-    hops      = pd.read_csv(data_path+'hops.csv',header=0,index_col=0)
-    hops['Zero-hop cluster'] = hops['Zero-hop cluster'].astype(str)
-    metadata  = metadata.join(hops)
-
     data.sort_index(inplace=True)
     metadata.sort_index(inplace=True)
     assert np.array(data.index == metadata.index).all()

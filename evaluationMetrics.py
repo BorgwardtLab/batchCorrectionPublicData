@@ -516,7 +516,7 @@ def min_speration_n_cluster(adata):
     n_ZH = len(adata.obs['ZeroHop'].unique())
     zh_break = np.zeros((n_ZH,1))
     zh_tosplit = list(adata.obs['ZeroHop'].unique())
-    for n_clusters in tqdm(range(1,n_gse)):
+    for n_clusters in tqdm.tqdm(range(1,n_gse)):
 
         if len(zh_tosplit)>0:
             adata.obs['Clustering'] = AgglomerativeClustering(n_clusters=n_clusters).fit_predict(adata.X)

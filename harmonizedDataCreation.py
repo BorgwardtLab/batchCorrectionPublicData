@@ -2,12 +2,12 @@
 #################         METADATA NEAREST NEIGHBOURS         ##################
 ################################################################################
 
-# 0) Load the data including information on zero hop neighbourhoods
-# 1) Filter out samples with no internal/external repeat experiment (no replica)
-# 2) Run batch correction
-# 3) Compare batch correction techniques by:
-    # 3a) Visualization (tsne)
-    # 3b) Evaluation metrics
+# 1) Load the data including information on zero hop neighbourhoods
+# 2) Filter out samples with no internal/external repeat experiment (no replica)
+# 3) Run batch correction
+# 4) Compare batch correction techniques by:
+    # 4a) Visualization (tsne)
+    # 4b) Evaluation metrics
 
 
 ###########################################################################################
@@ -20,6 +20,7 @@ import anndata as an
 import scanpy as sc
 import os
 from pathlib import Path
+import reComBat
 
 
 # Additional fucntions
@@ -34,7 +35,7 @@ from dataloading import *
 # Selections - paths etc.
 ###########################################################################################
 
-output = "output"
+output = "output_TEST"
 sc._settings.ScanpyConfig.figdir = Path(output)
 Path(os.path.join(os.getcwd(), output)).mkdir(parents=True, exist_ok=True)
 
@@ -42,8 +43,9 @@ batch_field = 'gse'
 obs_eval    = 'ZeroHop'
 
 data_path         = os.path.join(os.getcwd(),'data/')
-data_filename     = 'Data_from_CELs_R_exported_RMAnormalizedn.txt'
-metadata_filename = 'metadata_GPL84_affymetrix_PA_array.csv'
+data_filename     = 'Data_from_CELs_R_exported_RMAnormalized.txt'#Expression data, preprocessed by RMA normalization
+metadata_filename = 'metadata_GPL84_affymetrix_PA_array.csv'#All metadata anotations regarding growth conditions and PA strain
+media_filename    = 'PA_culture_conditions.csv'# Categorization of the relevant growth media
 
 excl2SampleBatches = True
 
@@ -62,18 +64,18 @@ useLR             = True
 adata, metadata, data,metadata_cat = getArrayData(data_path,excl2SampleBatches,data_filename,metadata_filename)
 
 
-# Create overview of all ZHs
+# Create overview of all ZeroHops
 df_meta = getZHoverview(metadata_cat, obs_eval)
 
 
-# Check if there are some large zerohops and subdivide these based on the refined media definintions
-metadata, metadata_cat, df_meta = checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta, obs_eval)
+# Check if there are some large ZeroHops and subdivide these based on the refined media definintions
+metadata, df_meta = checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta, obs_eval,media_filename)
 
 
 
 # Uncorrected data
-data_raw = data.copy()
-adata_raw         = an.AnnData(X=data_raw,obs=metadata)
+data_raw  = data.copy()
+adata_raw = an.AnnData(X=data_raw,obs=metadata)
 name = 'raw_raw'
 plot_new(adata_raw,output, name)
 
@@ -83,11 +85,11 @@ plot_new(adata_raw,output, name)
 
 # Standardization
 data_standardised = ((data.T-data.T.mean())/data.T.std()).T
-adata_new         = an.AnnData(X=data_standardised,obs=metadata)
-sc.pp.neighbors(adata_new, n_neighbors=10, n_pcs=40)
-sc.tl.tsne(adata_new)
-name = 'raw_standardised'
-plot_new(adata_new,output, name)
+adata_standardised= an.AnnData(X=data_standardised,obs=metadata)
+sc.pp.neighbors(adata_standardised, n_neighbors=10, n_pcs=40)
+sc.tl.tsne(adata_standardised)
+name = 'Standardised'
+plot_new(adata_standardised,output, name)
 
 
 # Marker gene elimination
@@ -107,19 +109,20 @@ plot_new(adata_PCel,output, name)
 
 
 # reComBat
-reg_name = '1e-9'
-reg      = '1e-09'
-combat_name = 'data_combat_coarse_l_' + reg + '_20211027.csv'
-data_combat = pd.read_csv(os.path.join(data_path, combat_name))
-data_combat.set_index('gsm', inplace=True)
+reg          = 1e-10
+model        = reComBat.reComBat(model='ridge', parametric=True, config={'alpha': reg})
+data_combat  = model.fit_transform(data_standardised, metadata[batch_field], X=metadata.drop(batch_field, axis=1))
 adata_combat = an.AnnData(X=data_combat, obs=metadata)
+name         = 'reComBat \n \u03BB\u2081=0, \u03BB\u2082='+str(reg)
+plot_new(adata_combat,output, name)
 
 
 # Combine all
-all_adata = [adata_raw,adata_new,adata_throw_out_marker,adata_PCel,adata_combat]
+all_adata = [adata_raw,adata_standardised,adata_throw_out_marker,adata_PCel,adata_combat]
 all_df    = [data_raw,data_standardised, data_throw_out_marker, df_PCel,data_combat]
 all_meta  = [metadata,metadata, metadata, metadata,metadata]
-all_names = ['Raw', 'Standardized', 'Eliminate\nMarker Genes','Eliminate PCs','reComBat \n \u03BB\u2081=0, \u03BB\u2082='+reg_name]
+all_names = ['Raw', 'Standardized', 'Eliminate\nMarker Genes','Eliminate PCs',
+             'reComBat \n \u03BB\u2081=0, \u03BB\u2082='+str(reg)]
 
 
 
@@ -195,7 +198,7 @@ if useLDA:
 
     label_a = 'Zero-Hop'
     label_b = 'Batch'
-    makeBoxPlot(data_aLDA, data_bLDA, all_names, label_a, label_b, ylabel='LDA Score',
+    makeBoxPlot(data_aLDA, data_bLDA, all_names, label_a, label_b,output, ylabel='LDA Score',
                 title='LDA Score')
     u_statistic, p_value = mannwhitneyu(data_aLDA[2], data_aLDA[3])
 
