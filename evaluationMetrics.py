@@ -526,7 +526,6 @@ def min_speration_n_cluster(adata):
                 df_tmp = adata.obs.loc[adata.obs['ZeroHop'] == zh, ['ZeroHop', 'Clustering']]
 
                 if not np.all(df_tmp.eq(df_tmp.iloc[0],axis='columns')):
-                    print('ZH'+zh+' broken!')
                     zh_break[izh] = n_clusters-1
                     zh_tosplit.remove(zh)
 

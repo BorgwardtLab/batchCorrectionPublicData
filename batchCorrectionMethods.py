@@ -22,7 +22,6 @@ def throw_out_marker_genes(data_in,metadata,n_throw_out=2):
 
     adata = an.AnnData(X=data_sub,obs=metadata_sub)
     sc.pp.neighbors(adata,use_rep='X')
-    sc.tl.leiden(adata)
     sc.tl.rank_genes_groups(adata, 'gse', method='t-test')
     to_throw_out = set()
     for n in range(n_throw_out):

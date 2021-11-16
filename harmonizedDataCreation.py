@@ -13,14 +13,9 @@
 ###########################################################################################
 # Libraries
 ###########################################################################################
-from scipy.stats import mannwhitneyu
-import numpy as np
-import pandas as pd
-import anndata as an
-import scanpy as sc
-import os
-from pathlib import Path
 import reComBat
+from scipy.stats import mannwhitneyu
+from pathlib import Path
 
 
 # Additional fucntions
