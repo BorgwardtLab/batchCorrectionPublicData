@@ -37,6 +37,9 @@ We provide a range of custom evaluation metrics probing different aspects of a s
 5. Cluster Cross-distance
 6. Logistic Regression (or other classifier) classification performance of batch and ZeroHop.
 
-
+## Contact
+This code is developed and maintained by members of the Machine Learning and Computational Biology Lab of Prof. Dr. Karsten Borgwardt. 
+[Michael F. Adamer](https://bsse.ethz.ch/mlcb/people/person-detail.Mjc3MTM2.TGlzdC83NjcsLTEyNjQ4MzU1MTY=.html)
+[Sarah C. Brüningk](http://sbrueningk.github.io/)
 
 
