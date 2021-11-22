@@ -8,7 +8,13 @@ Simply use this file to install all pachages via "pip install requirements.txt".
 
 
 ## Run example
-We provide all data and code to reproduce Figures 1, 2 and S1-S10. This code is executed by running "harmonizedData.py" where options referring the specific batch correction methods, evaluation metrics and output folders are defined. This script comprises three main parts: 
+We provide all data and code to reproduce Figures 1, 2 and S1-S10 of [our recent publication]().
+Simply execute the main script by running 
+```python
+harmonizedData.py
+```
+
+Here parameter options referring the specific batch correction methods, evaluation metrics and output folders are defined. This script comprises three main parts: 
 1. Data loading and metadata preprocessing
 2. Batch correction
 3. Evaluation of the batch correction methods
