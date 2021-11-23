@@ -8,7 +8,7 @@ Simply use this file to install all pachages via "pip install requirements.txt".
 
 
 ## Run example
-We provide all data and code to reproduce Figures 1, 2 and S1-S10 of [our recent publication]().
+We provide all data and code to reproduce Figures 1, 2 and S1-S10 of [our recent publication](https://doi.org/10.1101/2021.11.22.469488).
 Simply execute the main script by running 
 ```python
 harmonizedData.py
