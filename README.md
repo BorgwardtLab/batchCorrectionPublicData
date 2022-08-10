@@ -43,6 +43,9 @@ We provide a range of custom evaluation metrics probing different aspects of a s
 5. Cluster Cross-distance
 6. Logistic Regression (or other classifier) classification performance of batch and ZeroHop.
 
+### Synthetic data generation 
+We also provide code to gerenate and evaluate synthetic data in syntheticDataGeneration.py.Here, the user can define their choice of synthetic data properties, the properties of the imposed batch effects and then correct these with the set of possible methods outlined above. The obtained results can be compared to the relevant ground truth. 
+
 ## Contact
 This code is developed and maintained by members of the Machine Learning and Computational Biology Lab of Prof. Dr. Karsten Borgwardt. 
 [Michael F. Adamer](https://bsse.ethz.ch/mlcb/people/person-detail.Mjc3MTM2.TGlzdC83NjcsLTEyNjQ4MzU1MTY=.html)
