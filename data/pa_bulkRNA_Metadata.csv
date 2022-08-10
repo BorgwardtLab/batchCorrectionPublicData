@@ -1,0 +1,341 @@
+,gse,gsm,GrowthPhase,Culture_Coarse,Temperature_Coarse,Oxygenation,MediumCoarse,strain,ZeroHop
+GSM2991338,GSE110522,GSM2991338,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM2991339,GSE110522,GSM2991339,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428651,GSE121243,GSM3428651,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428652,GSE121243,GSM3428652,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3638078,GSE127751,GSM3638078,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3638079,GSE127751,GSM3638079,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674424,GSE128430,GSM3674424,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674425,GSE128430,GSM3674425,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674426,GSE128430,GSM3674426,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674427,GSE128430,GSM3674427,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674428,GSE128430,GSM3674428,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674429,GSE128430,GSM3674429,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674430,GSE128430,GSM3674430,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674431,GSE128430,GSM3674431,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3716489,GSE129571,GSM3716489,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3716490,GSE129571,GSM3716490,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4080079,GSE137485,GSM4080079,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4080080,GSE137485,GSM4080080,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4117161,GSE138731,GSM4117161,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4117162,GSE138731,GSM4117162,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4117163,GSE138731,GSM4117163,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572125,GSE151292,GSM4572125,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572126,GSE151292,GSM4572126,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572127,GSE151292,GSM4572127,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4633756,GSE153067,GSM4633756,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4633758,GSE153067,GSM4633758,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705679,GSE155521,GSM4705679,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705680,GSE155521,GSM4705680,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4975544,GSE163248,GSM4975544,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+GSM4975545,GSE163248,GSM4975545,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104471108,PRJEB24427,SAMEA104471108,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471109,PRJEB24427,SAMEA104471109,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209398,PRJEB8227,SAMEA3209398,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209399,PRJEB8227,SAMEA3209399,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SRX157659,SRP013960,SRX157659,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM2991340,GSE110522,GSM2991340,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM2991341,GSE110522,GSM2991341,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428653,GSE121243,GSM3428653,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428654,GSE121243,GSM3428654,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428655,GSE121243,GSM3428655,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428656,GSE121243,GSM3428656,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428657,GSE121243,GSM3428657,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3428658,GSE121243,GSM3428658,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3638080,GSE127751,GSM3638080,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3638081,GSE127751,GSM3638081,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674400,GSE128430,GSM3674400,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674401,GSE128430,GSM3674401,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674402,GSE128430,GSM3674402,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674403,GSE128430,GSM3674403,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674404,GSE128430,GSM3674404,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674405,GSE128430,GSM3674405,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674406,GSE128430,GSM3674406,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674407,GSE128430,GSM3674407,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674408,GSE128430,GSM3674408,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674409,GSE128430,GSM3674409,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674410,GSE128430,GSM3674410,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674411,GSE128430,GSM3674411,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674412,GSE128430,GSM3674412,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674413,GSE128430,GSM3674413,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674414,GSE128430,GSM3674414,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674415,GSE128430,GSM3674415,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674416,GSE128430,GSM3674416,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674417,GSE128430,GSM3674417,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674418,GSE128430,GSM3674418,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674419,GSE128430,GSM3674419,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674420,GSE128430,GSM3674420,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674421,GSE128430,GSM3674421,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674422,GSE128430,GSM3674422,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3674423,GSE128430,GSM3674423,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3716493,GSE129571,GSM3716493,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3716494,GSE129571,GSM3716494,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3780100,GSE128430,GSM3780100,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM3780101,GSE128430,GSM3780101,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4080081,GSE137485,GSM4080081,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4080082,GSE137485,GSM4080082,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4117164,GSE138731,GSM4117164,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4117165,GSE138731,GSM4117165,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4117166,GSE138731,GSM4117166,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4212732,GSE141753,GSM4212732,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4212733,GSE141753,GSM4212733,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4212734,GSE141753,GSM4212734,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4212735,GSE141753,GSM4212735,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+GSM4212736,GSE141753,GSM4212736,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+GSM4212737,GSE141753,GSM4212737,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+GSM4212738,GSE141753,GSM4212738,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+GSM4212739,GSE141753,GSM4212739,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+GSM4212740,GSE141753,GSM4212740,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+GSM4572128,GSE151292,GSM4572128,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572129,GSE151292,GSM4572129,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572130,GSE151292,GSM4572130,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572131,GSE151292,GSM4572131,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572132,GSE151292,GSM4572132,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4572133,GSE151292,GSM4572133,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4633760,GSE153067,GSM4633760,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4633762,GSE153067,GSM4633762,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705681,GSE155521,GSM4705681,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705682,GSE155521,GSM4705682,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705683,GSE155521,GSM4705683,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705684,GSE155521,GSM4705684,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705685,GSE155521,GSM4705685,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705686,GSE155521,GSM4705686,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705687,GSE155521,GSM4705687,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705688,GSE155521,GSM4705688,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705689,GSE155521,GSM4705689,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705690,GSE155521,GSM4705690,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705691,GSE155521,GSM4705691,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705692,GSE155521,GSM4705692,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705693,GSE155521,GSM4705693,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4705694,GSE155521,GSM4705694,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM4975546,GSE163248,GSM4975546,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+GSM4975547,GSE163248,GSM4975547,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+GSM4975548,GSE163248,GSM4975548,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+GSM4975549,GSE163248,GSM4975549,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104471110,PRJEB24427,SAMEA104471110,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471111,PRJEB24427,SAMEA104471111,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471112,PRJEB24427,SAMEA104471112,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471113,PRJEB24427,SAMEA104471113,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471114,PRJEB24427,SAMEA104471114,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471115,PRJEB24427,SAMEA104471115,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471116,PRJEB24427,SAMEA104471116,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471117,PRJEB24427,SAMEA104471117,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471118,PRJEB24427,SAMEA104471118,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104471119,PRJEB24427,SAMEA104471119,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209400,PRJEB8227,SAMEA3209400,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209401,PRJEB8227,SAMEA3209401,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209402,PRJEB8227,SAMEA3209402,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209403,PRJEB8227,SAMEA3209403,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209404,PRJEB8227,SAMEA3209404,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209405,PRJEB8227,SAMEA3209405,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209406,PRJEB8227,SAMEA3209406,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209407,PRJEB8227,SAMEA3209407,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209408,PRJEB8227,SAMEA3209408,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA3209409,PRJEB8227,SAMEA3209409,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SRX157660,SRP013960,SRX157660,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SRX157661,SRP013960,SRX157661,unknown,liquid,body_temp,aerobic,In vivo-like,PAO1,10
+GSM2878162,GSE107758,GSM2878162,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878163,GSE107758,GSM2878163,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878164,GSE107758,GSM2878164,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878165,GSE107758,GSM2878165,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878166,GSE107758,GSM2878166,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878167,GSE107758,GSM2878167,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878168,GSE107758,GSM2878168,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878169,GSE107758,GSM2878169,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878170,GSE107758,GSM2878170,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878171,GSE107758,GSM2878171,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878172,GSE107758,GSM2878172,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878173,GSE107758,GSM2878173,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878174,GSE107758,GSM2878174,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878175,GSE107758,GSM2878175,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878176,GSE107758,GSM2878176,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878177,GSE107758,GSM2878177,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878178,GSE107758,GSM2878178,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878179,GSE107758,GSM2878179,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878180,GSE107758,GSM2878180,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878181,GSE107758,GSM2878181,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878182,GSE107758,GSM2878182,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878183,GSE107758,GSM2878183,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878184,GSE107758,GSM2878184,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878185,GSE107758,GSM2878185,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878186,GSE107758,GSM2878186,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878187,GSE107758,GSM2878187,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878188,GSE107758,GSM2878188,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878189,GSE107758,GSM2878189,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878190,GSE107758,GSM2878190,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM2878191,GSE107758,GSM2878191,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM3371747,GSE119356,GSM3371747,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+GSM3371748,GSE119356,GSM3371748,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+GSM3371749,GSE119356,GSM3371749,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+GSM3371750,GSE119356,GSM3371750,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+GSM3371751,GSE119356,GSM3371751,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+GSM3371752,GSE119356,GSM3371752,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+GSM3371753,GSE119356,GSM3371753,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+GSM3371754,GSE119356,GSM3371754,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+GSM3371755,GSE119356,GSM3371755,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+GSM3371756,GSE119356,GSM3371756,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+GSM2027500,GSE76522,GSM2027500,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM2027501,GSE76522,GSM2027501,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM2027502,GSE76522,GSM2027502,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+GSM2027503,GSE76522,GSM2027503,Exp,liquid,body_temp,aerobic,Rich,PAO1,2
+SAMEA104402391,PRJEB23633,SAMEA104402391,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+SAMEA104402392,PRJEB23633,SAMEA104402392,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+SAMEA104402393,PRJEB23633,SAMEA104402393,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+SAMEA104402394,PRJEB23633,SAMEA104402394,Plat,liquid,body_temp,aerobic,Rich,PAO1,7
+SAMEA104555955,PRJEB24688,SAMEA104555955,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555956,PRJEB24688,SAMEA104555956,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555957,PRJEB24688,SAMEA104555957,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555958,PRJEB24688,SAMEA104555958,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555959,PRJEB24688,SAMEA104555959,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555960,PRJEB24688,SAMEA104555960,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555961,PRJEB24688,SAMEA104555961,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555962,PRJEB24688,SAMEA104555962,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555963,PRJEB24688,SAMEA104555963,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555964,PRJEB24688,SAMEA104555964,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555965,PRJEB24688,SAMEA104555965,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555966,PRJEB24688,SAMEA104555966,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555967,PRJEB24688,SAMEA104555967,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555968,PRJEB24688,SAMEA104555968,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA104555969,PRJEB24688,SAMEA104555969,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SAMEA4672973,PRJEB24688,SAMEA4672973,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+SAMEA4672974,PRJEB24688,SAMEA4672974,Plat,liquid,body_temp,aerobic,Rich,Uncharacterized,5
+SAMEA104710852,PRJEB25674,SAMEA104710852,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104710853,PRJEB25674,SAMEA104710853,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104710854,PRJEB25674,SAMEA104710854,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104710855,PRJEB25674,SAMEA104710855,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104710856,PRJEB25674,SAMEA104710856,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SAMEA104710857,PRJEB25674,SAMEA104710857,unknown,liquid,body_temp,aerobic,Rich,PAO1,11
+SRX389601,SRP033652,SRX389601,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX389604,SRP033652,SRX389604,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX389605,SRP033652,SRX389605,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX389626,SRP033652,SRX389626,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX389627,SRP033652,SRX389627,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX389628,SRP033652,SRX389628,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX2181664,SRP090213,SRX2181664,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX2181665,SRP090213,SRX2181665,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX2181666,SRP090213,SRX2181666,unknown,in vivo,body_temp,aerobic,"In vivo, mouse",PAO1,0
+SRX3789390,SRP135669,SRX3789390,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789391,SRP135669,SRX3789391,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789392,SRP135669,SRX3789392,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789393,SRP135669,SRX3789393,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789394,SRP135669,SRX3789394,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789395,SRP135669,SRX3789395,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789396,SRP135669,SRX3789396,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789397,SRP135669,SRX3789397,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789398,SRP135669,SRX3789398,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789399,SRP135669,SRX3789399,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789407,SRP135669,SRX3789407,unknown,liquid,body_temp,aerobic,In vivo-like,PAO1,10
+SRX3789408,SRP135669,SRX3789408,unknown,liquid,body_temp,aerobic,In vivo-like,PAO1,10
+SRX3789412,SRP135669,SRX3789412,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789414,SRP135669,SRX3789414,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789415,SRP135669,SRX3789415,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789416,SRP135669,SRX3789416,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX3789417,SRP135669,SRX3789417,unknown,in vivo,body_temp,aerobic,In vivo,Uncharacterized,4
+SRX4342817,SRP152215,SRX4342817,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX4342818,SRP152215,SRX4342818,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX4342819,SRP152215,SRX4342819,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX4342820,SRP152215,SRX4342820,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX4342821,SRP152215,SRX4342821,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX4342822,SRP152215,SRX4342822,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX7747527,SRP249973,SRX7747527,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX7747528,SRP249973,SRX7747528,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX7747537,SRP249973,SRX7747537,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX7747538,SRP249973,SRX7747538,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX7747539,SRP249973,SRX7747539,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+SRX7747540,SRP249973,SRX7747540,Exp,liquid,body_temp,aerobic,Defined,PAO1,8
+GSM3453643,GSE122048,GSM3453643,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM3453644,GSE122048,GSM3453644,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM3453645,GSE122048,GSM3453645,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM3453646,GSE122048,GSM3453646,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM3453647,GSE122048,GSM3453647,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM3453648,GSE122048,GSM3453648,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM1331356,GSE55197,GSM1331356,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM1331357,GSE55197,GSM1331357,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM1331358,GSE55197,GSM1331358,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM1331359,GSE55197,GSM1331359,unknown,liquid,body_temp,aerobic,Defined,PA14,1
+GSM1331366,GSE55197,GSM1331366,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331367,GSE55197,GSM1331367,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331368,GSE55197,GSM1331368,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331369,GSE55197,GSM1331369,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331370,GSE55197,GSM1331370,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331371,GSE55197,GSM1331371,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331374,GSE55197,GSM1331374,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331375,GSE55197,GSM1331375,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331376,GSE55197,GSM1331376,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331377,GSE55197,GSM1331377,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331378,GSE55197,GSM1331378,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331379,GSE55197,GSM1331379,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331380,GSE55197,GSM1331380,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331381,GSE55197,GSM1331381,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331382,GSE55197,GSM1331382,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331383,GSE55197,GSM1331383,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331384,GSE55197,GSM1331384,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331385,GSE55197,GSM1331385,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331386,GSE55197,GSM1331386,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331387,GSE55197,GSM1331387,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331388,GSE55197,GSM1331388,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331389,GSE55197,GSM1331389,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331390,GSE55197,GSM1331390,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331391,GSE55197,GSM1331391,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM1331392,GSE55197,GSM1331392,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331393,GSE55197,GSM1331393,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331394,GSE55197,GSM1331394,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331395,GSE55197,GSM1331395,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331396,GSE55197,GSM1331396,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331397,GSE55197,GSM1331397,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331398,GSE55197,GSM1331398,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331399,GSE55197,GSM1331399,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM1331400,GSE55197,GSM1331400,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+GSM2298156,GSE86211,GSM2298156,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM2298157,GSE86211,GSM2298157,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM2298158,GSE86211,GSM2298158,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+GSM2325626,GSE87213,GSM2325626,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+GSM2325627,GSE87213,GSM2325627,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+GSM2325628,GSE87213,GSM2325628,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+GSM2325629,GSE87213,GSM2325629,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+GSM2325630,GSE87213,GSM2325630,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+GSM2325631,GSE87213,GSM2325631,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SAMEA104555949,PRJEB24688,SAMEA104555949,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+SAMEA104555950,PRJEB24688,SAMEA104555950,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+SAMEA104555953,PRJEB24688,SAMEA104555953,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+SAMEA104555954,PRJEB24688,SAMEA104555954,Plat,liquid,body_temp,aerobic,Rich,PA14,6
+SAMN06345884,PRJNA375803,SAMN06345884,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+SAMN06345885,PRJNA375803,SAMN06345885,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+SAMN06345886,PRJNA375803,SAMN06345886,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+SAMN06345887,PRJNA375803,SAMN06345887,Exp,liquid,body_temp,aerobic,Rich,PA14,3
+SRX1141087,SRP062243,SRX1141087,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150126,SRP062243,SRX1150126,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150173,SRP062243,SRX1150173,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150179,SRP062243,SRX1150179,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150182,SRP062243,SRX1150182,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150183,SRP062243,SRX1150183,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150275,SRP062243,SRX1150275,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150276,SRP062243,SRX1150276,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150279,SRP062243,SRX1150279,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150281,SRP062243,SRX1150281,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150355,SRP062243,SRX1150355,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150429,SRP062243,SRX1150429,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150430,SRP062243,SRX1150430,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150778,SRP062243,SRX1150778,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150780,SRP062243,SRX1150780,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150803,SRP062243,SRX1150803,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150806,SRP062243,SRX1150806,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150809,SRP062243,SRX1150809,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150820,SRP062243,SRX1150820,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150821,SRP062243,SRX1150821,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150822,SRP062243,SRX1150822,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150840,SRP062243,SRX1150840,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150858,SRP062243,SRX1150858,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150874,SRP062243,SRX1150874,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150932,SRP062243,SRX1150932,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150933,SRP062243,SRX1150933,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150934,SRP062243,SRX1150934,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1150935,SRP062243,SRX1150935,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1156999,SRP062243,SRX1156999,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX1157000,SRP062243,SRX1157000,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX3789400,SRP135669,SRX3789400,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX3789401,SRP135669,SRX3789401,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX3789404,SRP135669,SRX3789404,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX3789405,SRP135669,SRX3789405,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX3789420,SRP135669,SRX3789420,Exp,liquid,body_temp,aerobic,Defined,PA14,9
+SRX3789421,SRP135669,SRX3789421,Exp,liquid,body_temp,aerobic,Defined,PA14,9

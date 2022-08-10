@@ -73,7 +73,7 @@ elif data_use == 'bulkRNA':
                    'Temperature_Coarse',
                    'MediumCoarse']
 
-    data_filename     = 'pa_bulkRNA_Data.txt'
+    data_filename     = 'pa_bulkRNA_Data.csv'
     metadata_filename = 'pa_bulkRNA_Metadata.csv'
     metadata, data = getbulkRNAData(data_path, data_filename, metadata_filename)
     df_meta = getZHoverview(metadata, obs_eval)
