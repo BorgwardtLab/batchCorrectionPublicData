@@ -8,7 +8,13 @@ Simply use this file to install all pachages via "pip install requirements.txt".
 
 
 ## Run example
-We provide all data and code to reproduce Figures 1, 2 and S1-S10. This code is executed by running "harmonizedData.py" where options referring the specific batch correction methods, evaluation metrics and output folders are defined. This script comprises three main parts: 
+We provide all data and code to reproduce Figures 1, 2 and S1-S10 of [our recent publication](https://doi.org/10.1101/2021.11.22.469488).
+Simply execute the main script by running 
+```python
+harmonizedDataCreation.py
+```
+
+Here parameter options referring the specific batch correction methods, evaluation metrics and output folders are defined. This script comprises three main parts: 
 1. Data loading and metadata preprocessing
 2. Batch correction
 3. Evaluation of the batch correction methods
@@ -37,6 +43,9 @@ We provide a range of custom evaluation metrics probing different aspects of a s
 5. Cluster Cross-distance
 6. Logistic Regression (or other classifier) classification performance of batch and ZeroHop.
 
-
+## Contact
+This code is developed and maintained by members of the Machine Learning and Computational Biology Lab of Prof. Dr. Karsten Borgwardt. 
+[Michael F. Adamer](https://bsse.ethz.ch/mlcb/people/person-detail.Mjc3MTM2.TGlzdC83NjcsLTEyNjQ4MzU1MTY=.html)
+[Sarah C. Brüningk](http://sbrueningk.github.io/)
 
 
