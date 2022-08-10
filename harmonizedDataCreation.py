@@ -16,6 +16,9 @@
 import reComBat
 from scipy.stats import mannwhitneyu
 from pathlib import Path
+import reComBat
+from harmony import harmonize
+import scgen
 
 
 # Additional fucntions
@@ -29,7 +32,6 @@ from dataloading import *
 ###########################################################################################
 # Selections - paths etc.
 ###########################################################################################
-
 output = "output_TEST"
 sc._settings.ScanpyConfig.figdir = Path(output)
 Path(os.path.join(os.getcwd(), output)).mkdir(parents=True, exist_ok=True)
@@ -37,12 +39,47 @@ Path(os.path.join(os.getcwd(), output)).mkdir(parents=True, exist_ok=True)
 batch_field = 'gse'
 obs_eval    = 'ZeroHop'
 
-data_path         = os.path.join(os.getcwd(),'data/')
-data_filename     = 'Data_from_CELs_R_exported_RMAnormalized.txt'#Expression data, preprocessed by RMA normalization
-metadata_filename = 'metadata_GPL84_affymetrix_PA_array.csv'#All metadata anotations regarding growth conditions and PA strain
-media_filename    = 'PA_culture_conditions.csv'# Categorization of the relevant growth media
+# Choose batch correction model
+# Options: 'Raw', 'Standardised','elMG','elPC', 'reComBat', 'Harmony', 'scGen', 'scGenZH','ComBat'
+models = ['reComBat']
 
-excl2SampleBatches = True
+# Choose data type. Options: 'MicroArray', 'bulkRNA'
+data_use  = 'bulkRNA'
+data_path = os.path.join(os.getcwd(),'data/')
+
+if data_use == 'MicroArray':
+
+    to_color_by = ['strain','GrowthPhase', 'Culture_Coarse', 'Temperature_Coarse','Oxygenation', 'MediumCoarse', 'Antibiotic']
+
+    data_filename     = 'Data_from_CELs_R_exported_RMAnormalized.txt'#Expression data, preprocessed by RMA normalization
+    metadata_filename = 'metadata_GPL84_affymetrix_PA_array.csv'     #All metadata anotations regarding growth conditions and PA strain
+    media_filename    = 'PA_culture_conditions.csv'                  # Categorization of the relevant growth media
+
+    # Get data
+    excl2SampleBatches = True
+    adata, metadata, data, metadata_cat = getArrayData(data_path, excl2SampleBatches, data_filename, metadata_filename)
+
+    # Create overview of all ZeroHops
+    df_meta = getZHoverview(metadata_cat, obs_eval)
+
+    # Check if there are some large ZeroHops and subdivide these based on the refined media definintions
+    metadata, df_meta = checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta, obs_eval, media_filename)
+
+elif data_use == 'bulkRNA':
+    to_color_by = ['strain',
+                   'GrowthPhase',
+                   'Oxygenation',
+                   'Culture_Coarse',
+                   'Temperature_Coarse',
+                   'MediumCoarse']
+
+    data_filename     = 'pa_bulkRNA_Data.txt'
+    metadata_filename = 'pa_bulkRNA_Metadata.csv'
+    metadata, data = getbulkRNAData(data_path, data_filename, metadata_filename)
+    df_meta = getZHoverview(metadata, obs_eval)
+else:
+    raise('Invalid Data Type')
+
 
 
 # Possible Evaluation Metrics:
@@ -54,71 +91,158 @@ useLDA            = True
 useShannonEntropy = True
 useLR             = True
 
-
-# Get data
-adata, metadata, data,metadata_cat = getArrayData(data_path,excl2SampleBatches,data_filename,metadata_filename)
-
-
-# Create overview of all ZeroHops
-df_meta = getZHoverview(metadata_cat, obs_eval)
-
-
-# Check if there are some large ZeroHops and subdivide these based on the refined media definintions
-metadata, df_meta = checkAndRefineZeroHops(data_path, metadata, metadata_cat, df_meta, obs_eval,media_filename)
+# Define if a gpu should be used for scGen
+useGPU            = True
 
 
 
-# Uncorrected data
-data_raw  = data.copy()
-adata_raw = an.AnnData(X=data_raw,obs=metadata)
-name = 'raw_raw'
-plot_new(adata_raw,output, name)
+
+# Combine all data
+all_names = []
+all_adata = []
+all_df = []
+all_meta = []
+if 'Raw' in models:
+    adata_raw = an.AnnData(X=data, obs=metadata)
+    name = 'Raw'
+    all_names.append(name)
+    all_adata.append(adata_raw)
+    all_df.append(data)
+    all_meta.append(metadata)
+    plot_new(adata_raw,output, name)
+
 
 
 
 # Batch correction methods as presented in paper:
-
 # Standardization
-data_standardised = ((data.T-data.T.mean())/data.T.std()).T
-adata_standardised= an.AnnData(X=data_standardised,obs=metadata)
-sc.pp.neighbors(adata_standardised, n_neighbors=10, n_pcs=40)
-sc.tl.tsne(adata_standardised)
-name = 'Standardised'
-plot_new(adata_standardised,output, name)
-
+data_standardised = ((data.T - data.T.mean()) / data.T.std()).T
+adata_standardised = an.AnnData(X=data_standardised, obs=metadata)
+if 'Standardised' in models:
+    name = 'Standardised'
+    all_names.append(name)
+    all_adata.append(adata_standardised)
+    all_df.append(data_standardised)
+    all_meta.append(metadata)
+    plot_new(adata_standardised,output, name)
 
 # Marker gene elimination
-data_throw_out_marker = throw_out_marker_genes(data_standardised,metadata,n_throw_out=8)
-adata_throw_out_marker= an.AnnData(X=data_throw_out_marker,obs=metadata)
-name = 'elMG'
-plot_new(adata_throw_out_marker,output, name)
-
+if 'elMG' in models:
+    data_throw_out_marker = throw_out_marker_genes(data_standardised, metadata, n_throw_out=8)
+    adata_throw_out_marker = an.AnnData(X=data_throw_out_marker, obs=metadata)
+    name = 'elMG'
+    all_names.append('Eliminate\nMarker Genes')
+    all_adata.append(adata_throw_out_marker)
+    all_df.append(data_throw_out_marker)
+    all_meta.append(metadata)
+    plot_new(adata_throw_out_marker,output, name)
 
 # PC elimination
-data_PCel  = throw_out_pca_zerohops(data_standardised,metadata,df_meta, obs = 'ZeroHop')
-adata_PCel = an.AnnData(X=data_PCel,obs=metadata)
-df_PCel    = pd.DataFrame(data_PCel,columns=data_standardised.columns,index =data_standardised.index)
-name       = 'elPC'
-plot_new(adata_PCel,output, name)
+if 'elPC' in models:
+    data_PCel = throw_out_pca_zerohops(data_standardised, metadata, df_meta, obs='ZeroHop')
+    adata_PCel = an.AnnData(X=data_PCel, obs=metadata)
+    df_PCel = pd.DataFrame(data_PCel, columns=data_standardised.columns, index=data_standardised.index)
+    name = 'elPC'
+    all_names.append('Eliminate PCs')
+    all_adata.append(adata_PCel)
+    all_df.append(data_PCel)
+    all_meta.append(metadata)
+    plot_new(adata_PCel,output, name)
 
+
+# Harmony
+if 'Harmony' in models:
+    Z = harmonize(data_standardised.values, metadata.drop('ZeroHop', axis = 1), batch_key='gse')
+    data_harmony = pd.DataFrame(data=Z, columns=data_standardised.columns, index=data_standardised.index)
+    adata_harmony = an.AnnData(X=data_harmony, obs=metadata)
+    name = 'Harmony'
+    all_names.append(name)
+    all_adata.append(adata_harmony)
+    all_df.append(data_harmony)
+    all_meta.append(metadata)
+    plot_new(adata_harmony,output, name)
+
+# scGen
+if 'scGen' in models:
+    train = scgen.setup_anndata(adata_standardised, batch_key="gse",
+                                categorical_covariate_keys= to_color_by , copy=True)
+    model = scgen.SCGEN(train)
+    model.save("../saved_models/model_batch_removal.pt", overwrite=True)
+    model.train(
+        max_epochs=200,
+        batch_size=32,
+        early_stopping=True,
+        early_stopping_patience=25,
+        use_gpu=useGPU
+    )
+    corrected_adata = model.batch_removal()
+    data_scGen = pd.DataFrame(data=corrected_adata.X, columns=data_standardised.columns, index=data_standardised.index)
+    adata_scGen = an.AnnData(X=data_scGen, obs=metadata)
+    name = 'scGen'
+    all_names.append(name)
+    all_adata.append(adata_scGen)
+    all_df.append(data_scGen)
+    all_meta.append(metadata)
+    #plot_newRNA(adata_scGen,output, name, to_colour_by= to_colour_by)
+
+if 'scGenZH' in models:
+    # train = scgen.setup_anndata(adata_standardised, batch_key="gse", labels_key="ZeroHop", copy=True)
+    train = scgen.setup_anndata(adata_standardised, batch_key="gse",labels_key='ZeroHop',
+                                categorical_covariate_keys=['strain',
+     'GrowthPhase',
+     'ZeroHop',
+     'Oxygenation',
+     'Culture_Coarse',
+     'Temperature_Coarse',
+     'MediumCoarse'] , copy=True)
+    model = scgen.SCGEN(train)
+    model.save("../saved_models/model_batch_removal.pt", overwrite=True)
+    model.train(
+        max_epochs=200,
+        batch_size=32,
+        early_stopping=True,
+        early_stopping_patience=25,
+        use_gpu=useGPU
+    )
+    corrected_adata = model.batch_removal()
+    data_scGen = pd.DataFrame(data=corrected_adata.X, columns=data_standardised.columns, index=data_standardised.index)
+    adata_scGen = an.AnnData(X=data_scGen, obs=metadata)
+    name = 'scGenZH'
+    all_names.append('scGen\n(Zero-Hop)')
+    all_adata.append(adata_scGen)
+    all_df.append(data_scGen)
+    all_meta.append(metadata)
+    plot_new(adata_scGen, output, name)
+
+
+# combat
+if 'ComBat' in models:
+    data_combatorig = pd.read_csv(os.path.join(data_path, 'RNA_combat_linear_20220111.csv'))
+    data_combatorig.set_index('gsm', inplace=True)
+    data_combatorig=data_combatorig.loc[metadata.index]
+    adata_combatorig = an.AnnData(X=data_combatorig, obs=metadata)
+    name = 'ComBat'
+    all_names.append(name)
+    all_adata.append(adata_combatorig)
+    all_df.append(data_combatorig)
+    all_meta.append(metadata)
+    plot_new(adata_combatorig, output, name)
 
 
 # reComBat
-reg          = 1e-10
-model        = reComBat.reComBat(model='ridge', parametric=True, config={'alpha': reg})
-data_combat  = model.fit_transform(data_standardised, metadata[batch_field], X=metadata.drop(batch_field, axis=1))
-adata_combat = an.AnnData(X=data_combat, obs=metadata)
-name         = 'reComBat \n \u03BB\u2081=0, \u03BB\u2082='+str(reg)
-plot_new(adata_combat,output, name)
+if 'reComBat' in models:
+    reg = 1e-9
+    model = reComBat.reComBat(model='ridge', parametric=True, config={'alpha': reg})
+    data_combat = model.fit_transform(data_standardised, metadata[batch_field],
+                                          X=metadata.drop([batch_field, 'ZeroHop'], axis=1))
 
-
-# Combine all
-all_adata = [adata_raw,adata_standardised,adata_throw_out_marker,adata_PCel,adata_combat]
-all_df    = [data_raw,data_standardised, data_throw_out_marker, df_PCel,data_combat]
-all_meta  = [metadata,metadata, metadata, metadata,metadata]
-all_names = ['Raw', 'Standardized', 'Eliminate\nMarker Genes','Eliminate PCs',
-             'reComBat \n \u03BB\u2081=0, \u03BB\u2082='+str(reg)]
-
+    adata_combat = an.AnnData(X=data_combat, obs=metadata)
+    name = 'reComBat \n \u03BB\u2081=0, \u03BB\u2082=' + str(reg)
+    all_names.append(name)
+    all_adata.append(adata_combat)
+    all_df.append(data_combat)
+    all_meta.append(metadata)
+    plot_new(adata_combat,output, name)
 
 
 

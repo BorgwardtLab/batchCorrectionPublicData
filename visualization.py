@@ -205,4 +205,50 @@ def makeBoxPlotSingle(data_a, ticks, label_a, output,  ylabel='Shannon Entropy',
     #plt.title(title)
     plt.tight_layout()
     plt.savefig(os.path.join(os.getcwd(), output, ylabel + '_' + title + '_boxplot.png'))
+def plot_newSynthetic(adata_raw,output, name, to_colour_by = ['strain','GrowthPhase','ZH','Oxygenation','Culture_Coarse',
+                                                     'Temperature_Coarse','MediumCoarseRel','Antibiotic','gse_ind']):
+    sc.pp.neighbors(adata_raw, n_neighbors=10, n_pcs=40)
+    sc.tl.tsne(adata_raw)
 
+    metadata = adata_raw.obs
+
+    # gse_ind = []
+    # uni_gse = list(metadata.gse.unique())
+    # for g in metadata['gse']:
+    #     gse_ind.append(uni_gse.index(g))
+    # adata_raw.obs['gse_ind'] = gse_ind
+    # metadata['gse_ind'] = gse_ind
+
+
+    for c in to_colour_by:
+
+        cmap = plt.cm.jet  # define the colormap
+        # extract all colors from the .jet map
+        cmaplist = [cmap(i) for i in range(cmap.N)]
+        # force the first color entry to be grey
+        cmaplist[0] = (.5, .5, .5, 1.0)
+
+        cmap = mpl.colors.LinearSegmentedColormap.from_list(
+            'Custom cmap', cmaplist, cmap.N)
+        sc.pl.tsne(adata_raw, color=[c], show=True, ncols=1, hspace=0.25, legend_fontsize=12, alpha = 0.5,
+                   color_map =cmap )
+        plt.title(' ')
+
+        current_handles, current_labels = plt.gca().get_legend_handles_labels()
+        #plt.legend()#current_handles,loc='best')
+
+        plt.legend().remove()
+        fig = plt.gcf()
+        fig.set_size_inches(5,5)
+        plt.title(c)
+        plt.tight_layout()
+        plt.savefig(os.path.join(os.getcwd(), output, name + '_' + c + '_tsne_nolegend.png'))
+
+        plt.legend()#current_handles,loc='best')
+
+
+        fig = plt.gcf()
+        fig.set_size_inches(5,5)
+        plt.tight_layout()
+        plt.savefig(os.path.join(os.getcwd(), output, name + '_' + c + '_tsne.png'))
+    return 0

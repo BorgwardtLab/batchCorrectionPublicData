@@ -4,6 +4,8 @@ import pandas as pd
 import anndata as an
 import os
 from collections import Counter
+import gffpandas.gffpandas as gffpd
+import tqdm
 
 
 # Data loading and annotation
@@ -691,4 +693,13 @@ def getArrayData(data_path,excl2SampleBatches, data_filename, metadata_filename)
     adata = an.AnnData(X=pd.DataFrame(data=data_use, columns=allgenes), obs=metadata_all)
 
     return adata, metadata_all, data_use, metadata_hops
+
+# RNA data
+def getbulkRNAData(data_path,data_filename,metadata_filename):
+
+    data     = pd.read_csv(os.path.join(data_path, data_filename))
+    metadata = pd.read_csv(os.path.join(data_path, metadata_filename))
+
+    return metadata, data
+
 
